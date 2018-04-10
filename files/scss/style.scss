@@ -131,7 +131,7 @@ button {
     justify-content: space-between;
     padding: 0px 30px;
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
         padding: 0px 15px;
     }
 
@@ -177,7 +177,7 @@ button {
     #primary-menu {
           text-align: center;  
           margin-bottom: 0px;
-          @include media-breakpoint-down(sm) {
+          @include media-breakpoint-down(md) {
             position: fixed;
             left: 0;
             padding-left: 0px;
@@ -185,7 +185,7 @@ button {
             top:  $top_menu_height;
             text-align: left;
             display: none;
-            
+            background: #332e2d;
         }
     }
 
@@ -207,13 +207,13 @@ button {
         &.active {
             a {
                 color:#CC0B07;
-                @include media-breakpoint-down(sm) {
+                @include media-breakpoint-down(md) {
                     color:#ff1410;
                 }
             }
         }
 
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(md) {
             display: block;
             font-size: 13px;
         }
@@ -225,11 +225,11 @@ button {
             padding: 30px 30px;
             text-decoration: none;
 
-            @include media-breakpoint-between(sm, lg) {
+            @include media-breakpoint-between(md, lg) {
                 padding: 30px 20px;
             }
 
-            @include media-breakpoint-down(sm) {
+            @include media-breakpoint-down(md) {
                 padding: 20px 20px;
                 display: block;
                 background: #332e2d;
@@ -238,7 +238,7 @@ button {
 
             &:hover {
                 color: #CC0B07;
-                @include media-breakpoint-down(sm) {
+                @include media-breakpoint-down(md) {
                     color:#ff1410;
                 }
             }
@@ -261,7 +261,7 @@ button {
 
             display: none;
 
-            @include media-breakpoint-down(sm){
+            @include media-breakpoint-down(md){
                 border: 1px solid #868686;
                 left: 0px;
                 width: 100%;
@@ -282,14 +282,14 @@ button {
                     display: block;
                     padding: 20px 30px;
                     font-size: 13px;
-                    @include media-breakpoint-down(sm) {
+                    @include media-breakpoint-down(md) {
                         font-size: 12px;
                         background: #fff;
                         color: #333;
                         
                     }
                     &:hover {
-                        @include media-breakpoint-down(sm) {
+                        @include media-breakpoint-down(md) {
                             background: #ececec;
                         }
                     }
@@ -310,22 +310,206 @@ button {
 
 /*** Body ***/
 
+
+/*** Common Elements ***/
 .apply_max_width {
     max-width: $max_width_value;
     margin: 0 auto;
 
-    @include media-breakpoint-down(sm) {
-        width: 95%;
-    }
-
-    @include media-breakpoint-between(md, lg) {
-        width: 90%;
-    }
-
     &.max_width_contact {
         max-width: $max_width_contact;
+        @include media-breakpoint-down(lg) {
+            width: 100%;
+        }
     }
 }
+
+.max_width_1050 {
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.when_where_time_divs_container {
+
+    margin: 3em 0;
+
+    .when_where_time_div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &:first-child {
+            @include media-breakpoint-down(sm){
+                margin-top: 3em;
+            } 
+        }
+
+        @include media-breakpoint-down(sm){
+            margin-top: 6em;
+        }
+
+        h4 {
+            font-family: montserrat;
+            font-size: 18px;
+            text-transform: uppercase;
+            font-weight: 800;
+            color: #cc0b07;
+            margin-bottom: 25px;
+        }
+
+        p{
+            margin-bottom: 0px;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+    }
+}
+
+#about_the_event {
+    .about_event_container {
+
+        margin-top: 6em;
+        
+        @include media-breakpoint-down(sm){
+            margin-top: 0em;
+        }
+
+        h2 {
+            font-family: lato;
+            text-transform: capitalize;
+            text-align: left;
+
+            span {
+                color: #CC0B07;
+            }
+        }
+
+        .content_container{
+            margin-top: 2em;
+
+            p{
+                font-size: 18px;
+                line-height: 1.75em;
+            }
+        }
+    }
+
+    .location_map {
+        margin-top: 45px;
+        margin-bottom: 30px;
+        iframe {
+            width: 100%;
+        }
+    }
+
+    .speaker_container {
+
+        margin-bottom: 4em;
+
+        .speaker_image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f9f9f9;
+
+            @include media-breakpoint-down(lg){
+                padding-top: 3em;
+            }
+
+            .speaker_img {
+                width: 275px;
+                height: 270px;
+                border-radius: 200px;
+                background-color: #888;
+
+                @include media-breakpoint-down(lg){
+                    margin-bottom: 0em;
+                }
+            }
+        }
+
+        .speaker_details{
+
+            background: #f9f9f9;
+            padding: 30px;
+
+            h3 {
+                font-family: montserrat;
+                text-transform: uppercase;
+                font-size: 16px;
+                font-weight: 600;
+                margin-bottom: 30px;
+                color: #CC0B07;
+
+                @include media-breakpoint-down(lg){
+                    text-align: center;
+                }
+            }
+
+            p{
+                line-height: 2em;
+                font-size: 18px;
+                margin-bottom: 0px;
+            }
+        }
+        
+    }
+
+    &.landing_section {
+        @include media-breakpoint-down(lg){
+            padding: 30px 40px;
+        }
+    }
+    
+    
+}
+/* Landing Section */
+.landing_section {
+
+    padding: 60px 50px;
+
+    @include media-breakpoint-down(sm) {
+        padding: 50px 15px;
+    }
+
+    h2 {
+        font-family: montserrat;
+        font-size: 28px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 20px;
+        line-height: 1.5em;
+        
+
+        @include media-breakpoint-down(sm) {
+            font-size: 24px;
+        }
+
+        span {
+            color: #F44336;
+        }
+    }
+
+    .h2_underline {
+        height: 1px;
+        width: 100px;
+        background: #B0B0B0;
+        margin: 0 auto;
+        margin-bottom: 5em;
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 3em;
+        }
+    }
+
+    &.bg_white {
+        background: #fff;
+    }
+}
+/* Landing Section */
+/*** End of Common Elements ***/
 
 /* Carousel */
 #landing_carousel {
@@ -381,7 +565,7 @@ button {
             line-height: 1.5em;
         }
 
-        button {
+        a {
             background-color: #FC3935;
             margin-top: 50px;
             border-radius: 4px;
@@ -392,10 +576,28 @@ button {
             font-size: 14px;
             outline: none;
             transition: all 0.3s ease;
+            display: inline-block;
 
             &:active {
                 position: relative;
                 top: 1px;
+            }
+        }
+    }
+
+    &.other_pages_carousel {
+        height: 350px;
+        background-position: 0% 55%;
+        @include media-breakpoint-down(sm) {
+            height: 200px;
+        }
+        .carousel_text {
+            h2 {
+                font-size: 42px;
+                margin-bottom: 0px;
+                @include media-breakpoint-down(sm) {
+                    font-size: 30px;
+                }
             }
         }
     }
@@ -412,12 +614,21 @@ button {
         padding: 40px 15px;
     }
 
+    .apply_max_width {
+        @include media-breakpoint-down(sm) {
+            max-width: 95%;
+        }
+    }
+
     p {
         text-align: center;
         font-size: 18px;
         line-height: 30px;
         font-weight: 300;
         margin-bottom: 0px;
+        @include media-breakpoint-down(sm) {
+            font-size: 16px;
+        }
 
         @include media-breakpoint-down(md) {
             text-align: center;
@@ -465,48 +676,15 @@ button {
                 text-transform: uppercase;
                 text-align: center;
                 line-height: 1.5em;
+
+                @include media-breakpoint-down(sm) {
+                    font-size: 13px;
+                }
             }
         }
     }
 }
 /* About Event Summary Section : Under Carousel */
-
-/* Landing Section (Common) */
-.landing_section {
-
-    padding: 60px 50px;
-
-    @include media-breakpoint-down(sm) {
-        padding: 50px 15px;
-    }
-
-    h2 {
-        font-family: montserrat;
-        font-size: 28px;
-        font-weight: 700;
-        text-transform: uppercase;
-        text-align: center;
-        margin-bottom: 20px;
-        
-
-        @include media-breakpoint-down(sm) {
-            font-size: 24px;
-        }
-
-        span {
-            color: #F44336;
-        }
-    }
-
-    .h2_underline {
-        height: 1px;
-        width: 100px;
-        background: #B0B0B0;
-        margin: 0 auto;
-        margin-bottom: 5em;
-    }
-}
-/* Landing Section (Common) */
 
 /* Featured Speaker */
 #featured_speakers {
@@ -520,15 +698,15 @@ button {
             margin-bottom: 75px;
 
             .image {
-                width: 280px;
-                height: 280px;
+                width: 275px;
+                height: 275px;
                 background-color: #fff;
                 border-radius: 300px;
             }
 
             .name {
-                font-family: montserrat;
-                font-size: 16px;
+                font-family: lato;
+                font-size: 15px;
                 font-weight: 700;
                 text-transform: uppercase;
                 margin-top: 20px;
@@ -542,6 +720,12 @@ button {
 #directions_to_the_venue {
     background: #fff;
     min-height: 500px;
+
+    .apply_max_width {
+        @include media-breakpoint-down(sm) {
+            max-width: 95%;
+        }
+    }
 
     .location_map {
         margin-top: 45px;
@@ -578,6 +762,7 @@ button {
                 transition: all 0.3s ease;
                 cursor: pointer;
                 color: #444;
+                user-select: none;
 
                 &.current {
                     border-left: 5px solid #F44336;
