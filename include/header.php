@@ -24,12 +24,12 @@
         <div class="row">
             <!-- Header: Menu + Logo -->
             <header id="menu_header_container" class="col-12">
-                <div id="menu_logo">
+                <a id="menu_logo" href="index.php">
                     <h2>Bless Chicago
                         <span class="separator">|</span>
                         <span class="year">2018</span>
                     </h2>
-                </div>
+                </a>
                 <div id="menu_item_container">
                     <ul id="primary-menu">
                         <li class="<?php echo (($basename == 'index.php')?'active':'');?>">

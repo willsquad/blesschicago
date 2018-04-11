@@ -15,8 +15,25 @@
                     <!-- Landing Carousel -->
 
                     <!-- About and When, Where, Time -->
-                    <div id="about_the_event" class="landing_section bg_white col-12">
+                    <div id="about_the_event" class="landing_section bg_white col-12" style="padding: 30px 40px;">
                         <div class="apply_max_width">
+
+                            <!-- When, Where, Time Container -->
+                            <div class="when_where_time_divs_container row hidden-sm-down">
+                                <div class="when_where_time_div col-12 col col-md-4 col-lg-4">
+                                    <h4>When</h4>
+                                    <p>September 15 - 18, 2018</p>
+                                </div>
+                                <div class="when_where_time_div col-12 col col-md-4 col-lg-4">
+                                    <h4>Where</h4>
+                                    <p>XYZ Convention Center | Addison, IL</p>
+                                </div>
+                                <div class="when_where_time_div col-12 col col-md-4 col-lg-4">
+                                    <h4>Time</h4>
+                                    <p>9:00 AM - 5:00 PM</p>
+                                </div>
+                            </div>
+                            <!-- When, Where, Time Container -->
 
                             <!-- Speaker container -->
                             <div class="speaker_container row">

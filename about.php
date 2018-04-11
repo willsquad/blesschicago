@@ -25,7 +25,7 @@
                                 </div>
                                 <div class="when_where_time_div col-12 col col-md-4 col-lg-4">
                                     <h4>Where</h4>
-                                    <p>XYZ Convention Centre | Addison, IL</p>
+                                    <p>XYZ Convention Center | Addison, IL</p>
                                 </div>
                                 <div class="when_where_time_div col-12 col col-md-4 col-lg-4">
                                     <h4>Time</h4>
